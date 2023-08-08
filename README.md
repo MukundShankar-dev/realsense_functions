@@ -9,7 +9,7 @@ Running camera_feed.py will open a window displaying the rgb video stream and th
 
 Running extrinsic_intrinsic.py will print the extrinsic and intrinsic matrices of the camera's depth and color streams, then the extrinsics from the depth to the color stream. These streams and parameters can be adjusted as necessary within the file by changing the used stream (starting from lines 14 and 16).
 
-Running project_point.py will project a point (in xyz format, meters from origin, where the center of the image is the origin) to the camera feed, and give you pixel coordinates for that point in the image from the camera. (On running the file, this can be seen as a blue dot on the window) The projected point can be adjusted by changing the point variable on line 49.
+Running project_point.py will project a point (in xyz format, meters from origin, where the center of the image is the origin) to the camera feed, and give you pixel coordinates for that point in the image from the camera. (On running the file, this can be seen as a blue dot on the window) The projected point can be adjusted by changing the `point` variable on line 49.
 
 The deproject_pixel file will open a window displaying the video stream from the camera. Then, you can click a point on the window, and the 3D coordinates (xyz, origin being at the center of the camera stream) will be printed in the console.
 
