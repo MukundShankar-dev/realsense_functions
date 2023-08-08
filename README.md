@@ -15,6 +15,7 @@ The deproject_pixel file will open a window displaying the video stream from the
 
 ## Requirements
 Python 3.6+
+
 [Intel realsense SDK](https://www.intelrealsense.com/sdk-2/)
 
 [Intel pyrealsense2 library](https://pypi.org/project/pyrealsense2/)
