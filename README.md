@@ -1,7 +1,7 @@
 # realsense_functions
 
 ## Descriptions of functions
-This library is made primarily to work with the Intel RealSense D435i camera. If working with different cameras, check the dimensions of video streaming and adjust the relevant parameters in the corresponding files as needed.
+This library is made primarily to work with the Intel RealSense D435i camera. If working with different cameras, please check the dimensions of video streaming and adjust the relevant parameters in the corresponding files as needed.
 
 Note that for the following, you will need to have intel's pyrealsense library, numpy, and opencv installed. 
 
