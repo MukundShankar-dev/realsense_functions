@@ -1,5 +1,6 @@
 # realsense_functions
 
+## Descriptions of functions
 This library is made primarily to work with the Intel RealSense D435i camera. If working with different cameras, check the dimensions of video streaming and adjust the relevant parameters in the corresponding files as needed.
 
 Note that for the following, you will need to have intel's pyrealsense library, numpy, and opencv installed. 
@@ -11,3 +12,9 @@ Running extrinsic_intrinsic.py will print the extrinsic and intrinsic matrices o
 Running project_point.py will project a point (in xyz format, meters from origin, where the center of the image is the origin) to the camera feed, and give you pixel coordinates for that point in the image from the camera. (On running the file, this can be seen as a blue dot on the window) The projected point can be adjusted by changing the point variable on line 49.
 
 The deproject_pixel file will open a window displaying the video stream from the camera. Then, you can click a point on the window, and the 3D coordinates (xyz, origin being at the center of the camera stream) will be printed in the console.
+
+## Requirements
+Intel realsense SDK
+Intel pyrealsense2 library
+numpy
+openCV
