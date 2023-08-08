@@ -14,7 +14,8 @@ Running project_point.py will project a point (in xyz format, meters from origin
 The deproject_pixel file will open a window displaying the video stream from the camera. Then, you can click a point on the window, and the 3D coordinates (xyz, origin being at the center of the camera stream) will be printed in the console.
 
 ## Requirements
-Intel realsense SDK
-Intel pyrealsense2 library
-numpy
-openCV
+Python 3.6+
+[Intel realsense SDK](https://www.intelrealsense.com/sdk-2/)
+[Intel pyrealsense2 library](https://pypi.org/project/pyrealsense2/)
+[numpy](https://numpy.org/)
+[openCV](https://pypi.org/project/opencv-python/)
