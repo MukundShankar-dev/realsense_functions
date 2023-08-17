@@ -11,17 +11,17 @@ Python 3.6+
 Copy the `camera_processor.py` file into your directory. At the top of your python file, use `from camera_processor import CameraProcessor`. Then, create an object of the class - for example, `obj = CameraProcessor()`.
 
 ## Functions
-# `rgb_feed`
+### `rgb_feed`
 Calling `obj.rgb_feed` will open a cv2 window displaying the color video feed from the camera.
-# `depth_feed`
+### `depth_feed`
 Calling `obj.depth_feed` will open a cv2 window displaying the depth video feed from the camera, with a color map applied to it to make it more understandable.
-# `rgb_depth_feed`
+### `rgb_depth_feed`
 `obj.rgb_depth_feed` will display an cv2 window with the color and depth feeds next to each other.
-# `get_depth_intrinsics`
+### `get_depth_intrinsics`
 Will return the depth intrinsics from the camera, using the Intel SDK's own type for intrinsic data.
-# `project_point`
+### `project_point`
 To be used, the x, y, and z coordinates of a point will need to be passed into this function - for example, `obj.project_point(1, 2, 3)` will project the point [1, 2, 3] (in meters from the camera) to the image displayed by the camera. This function takes in a point in space and returns pixel coordinates for an image.
-# `deproject_pixel`
+### `deproject_pixel`
 Opens a window where the user can click a point in the image, and will then return the distance data to the clicked point as a coordinate in space in [x, y, z] format (meters from camera). The relevant coordinates calculated will also be printed to the console.
 ## Links to requirements
 [Intel realsense SDK](https://www.intelrealsense.com/sdk-2/)
