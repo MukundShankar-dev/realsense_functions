@@ -1,21 +1,29 @@
-# realsense_functions
+# Realsense Camera Processing
 
-## Descriptions of functions
+## About
 This library is made primarily to work with the Intel RealSense D435i camera. If working with different cameras, please check the dimensions of video streaming and adjust the relevant parameters in the corresponding files as needed.
 
 Note that for the following, you will need to have intel's pyrealsense library, numpy, and opencv installed. 
-
-Running camera_feed.py will open a window displaying the rgb video stream and the color stream from the camera. Similarly, running depth_viewer.py will open a window containing the depth feed from the camera.
-
-Running extrinsic_intrinsic.py will print the extrinsic and intrinsic matrices of the camera's depth and color streams, then the extrinsics from the depth to the color stream. These streams and parameters can be adjusted as necessary within the file by changing the used stream (starting from lines 14 and 16).
-
-Running project_point.py will project a point (in xyz format, meters from origin, where the center of the image is the origin) to the camera feed, and give you pixel coordinates for that point in the image from the camera. (On running the file, this can be seen as a blue dot on the window) The projected point can be adjusted by changing the `point` variable on line 49.
-
-The deproject_pixel file will open a window displaying the video stream from the camera. Then, you can click a point on the window, and the 3D coordinates (xyz, origin being at the center of the camera stream) will be printed in the console.
-
 ## Requirements
 Python 3.6+
 
+## Usage
+Copy the `camera_processor.py` file into your directory. At the top of your python file, use `from camera_processor import CameraProcessor`. Then, create an object of the class - for example, `obj = CameraProcessor()`.
+
+## Functions
+# `rgb_feed`
+Calling `obj.rgb_feed` will open a cv2 window displaying the color video feed from the camera.
+# `depth_feed`
+Calling `obj.depth_feed` will open a cv2 window displaying the depth video feed from the camera, with a color map applied to it to make it more understandable.
+# `rgb_depth_feed`
+`obj.rgb_depth_feed` will display an cv2 window with the color and depth feeds next to each other.
+# `get_depth_intrinsics`
+Will return the depth intrinsics from the camera, using the Intel SDK's own type for intrinsic data.
+# `project_point`
+To be used, the x, y, and z coordinates of a point will need to be passed into this function - for example, `obj.project_point(1, 2, 3)` will project the point [1, 2, 3] (in meters from the camera) to the image displayed by the camera. This function takes in a point in space and returns pixel coordinates for an image.
+# `deproject_pixel`
+Opens a window where the user can click a point in the image, and will then return the distance data to the clicked point as a coordinate in space in [x, y, z] format (meters from camera). The relevant coordinates calculated will also be printed to the console.
+## Links to requirements
 [Intel realsense SDK](https://www.intelrealsense.com/sdk-2/)
 
 [Intel pyrealsense2 library](https://pypi.org/project/pyrealsense2/)
@@ -23,3 +31,5 @@ Python 3.6+
 [numpy](https://numpy.org/)
 
 [openCV](https://pypi.org/project/opencv-python/)
+
+
